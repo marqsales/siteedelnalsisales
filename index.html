@@ -7,7 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="HiSOAk7m293vupL3t82M1KT10hTwCr8gR0CMUHdoy_w" />
     <title>Dra. Edelnasi Sales | Biomédica em Estética</title>
-    <link rel="icon" href="logo-dellsales.jpeg">
+    
+    <!-- FAVICON E LOGO PARA O GOOGLE E NAVEGADORES -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="logo-dellsales-32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="logo-dellsales.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="logo-dellsales.png">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -836,7 +841,6 @@
                     const isVideo = file.mimeType.startsWith('video/');
 
                     if (isVideo) {
-                        // Utiliza o player do próprio Google Drive via iframe para exibição correta dos vídeos
                         const embedVideoUrl = `https://drive.google.com/file/d/${file.id}/preview`;
                         mediaElement = `
                             <iframe 
@@ -845,7 +849,6 @@
                                 loading="lazy">
                             </iframe>`;
                     } else {
-                        // Link direto para renderizar imagens
                         const imgUrl = `https://lh3.googleusercontent.com/d/${file.id}`;
                         mediaElement = `<img src="${imgUrl}" alt="${file.name}" loading="lazy">`;
                     }
